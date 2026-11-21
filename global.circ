@@ -357,6 +357,7 @@
     <comp loc="(1020,220)" name="Increment23">
       <a name="label" val="Increment23_1"/>
     </comp>
+    <comp loc="(400,670)" name="load_24"/>
     <comp loc="(420,220)" name="Increment59">
       <a name="label" val="Increment59_1"/>
     </comp>
@@ -16726,6 +16727,65 @@
     <wire from="(250,250)" to="(250,270)"/>
     <wire from="(250,250)" to="(260,250)"/>
     <wire from="(320,170)" to="(320,210)"/>
+  </circuit>
+  <circuit name="load_24">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="load_24"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(140,200)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="Increase"/>
+    </comp>
+    <comp lib="0" loc="(140,230)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="Load1"/>
+    </comp>
+    <comp lib="0" loc="(140,260)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="Load2"/>
+    </comp>
+    <comp lib="0" loc="(180,290)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="Heure_pre"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(380,230)" name="Constant"/>
+    <comp lib="0" loc="(740,410)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Heure_suiv"/>
+      <a name="output" val="true"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="2" loc="(740,410)" name="Multiplexer">
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="4" loc="(380,180)" name="Counter">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="max" val="0xf7"/>
+      <a name="width" val="5"/>
+    </comp>
+    <wire from="(140,200)" to="(290,200)"/>
+    <wire from="(140,230)" to="(340,230)"/>
+    <wire from="(140,260)" to="(240,260)"/>
+    <wire from="(180,290)" to="(330,290)"/>
+    <wire from="(240,260)" to="(240,500)"/>
+    <wire from="(240,500)" to="(720,500)"/>
+    <wire from="(290,200)" to="(290,260)"/>
+    <wire from="(290,260)" to="(380,260)"/>
+    <wire from="(330,290)" to="(330,450)"/>
+    <wire from="(330,290)" to="(380,290)"/>
+    <wire from="(330,450)" to="(630,450)"/>
+    <wire from="(340,210)" to="(340,230)"/>
+    <wire from="(340,210)" to="(380,210)"/>
+    <wire from="(380,210)" to="(390,210)"/>
+    <wire from="(570,290)" to="(660,290)"/>
+    <wire from="(630,400)" to="(630,450)"/>
+    <wire from="(630,400)" to="(710,400)"/>
+    <wire from="(660,290)" to="(660,420)"/>
+    <wire from="(660,420)" to="(710,420)"/>
+    <wire from="(720,430)" to="(720,500)"/>
   </circuit>
   <vhdl name="lcd1602_i2cpcf8574">--------------------------------------------------------------------------------
 --	filename: lcd1602_i2cpcf8574
