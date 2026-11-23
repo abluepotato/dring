@@ -16513,13 +16513,13 @@
     <a name="circuit" val="SetAlarm"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(120,650)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="AlrH"/>
+    </comp>
     <comp lib="0" loc="(180,350)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="AlrM"/>
-    </comp>
-    <comp lib="0" loc="(180,580)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="AlrH"/>
     </comp>
     <comp lib="0" loc="(680,440)" name="Splitter">
       <a name="appear" val="right"/>
@@ -16650,9 +16650,12 @@
     </comp>
     <comp loc="(400,580)" name="input_24"/>
     <comp loc="(480,350)" name="input_59"/>
-    <wire from="(100,370)" to="(100,600)"/>
+    <wire from="(100,370)" to="(100,580)"/>
     <wire from="(100,370)" to="(260,370)"/>
-    <wire from="(100,600)" to="(180,600)"/>
+    <wire from="(100,580)" to="(180,580)"/>
+    <wire from="(120,650)" to="(130,650)"/>
+    <wire from="(130,600)" to="(130,650)"/>
+    <wire from="(130,600)" to="(180,600)"/>
     <wire from="(180,350)" to="(260,350)"/>
     <wire from="(400,580)" to="(680,580)"/>
     <wire from="(480,350)" to="(660,350)"/>
