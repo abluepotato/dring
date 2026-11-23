@@ -9,6 +9,9 @@
     <tool name="Pin">
       <a name="appearance" val="classic"/>
     </tool>
+    <tool name="Tunnel">
+      <a name="facing" val="east"/>
+    </tool>
   </lib>
   <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2"/>
@@ -21,8 +24,8 @@
   <lib desc="#BFH-Praktika" name="9"/>
   <lib desc="#Input/Output-Extra" name="10"/>
   <lib desc="#Soc" name="11"/>
-  <lib desc="file#quentin.circ" name="12"/>
-  <lib desc="file#valery.circ" name="13"/>
+  <lib desc="file#valery.circ" name="12"/>
+  <lib desc="file#quentin.circ" name="13"/>
   <main name="print"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -62,7 +65,7 @@
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="downloadBoard" val="TERASIC_DE10LITE"/>
     <a name="downloadFrequency" val="2500000.0"/>
-    <a name="simulationFrequency" val="1.0"/>
+    <a name="simulationFrequency" val="16.0"/>
     <boardmap boardname="TERASIC_DE10LITE">
       <mc key="/CLICK" map="575,243"/>
       <mc key="/MODE" map="575,285"/>
@@ -73,10 +76,6 @@
     <comp lib="0" loc="(1050,1350)" name="Tunnel">
       <a name="label" val="Mode"/>
       <a name="width" val="4"/>
-    </comp>
-    <comp lib="0" loc="(1090,720)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="CLCK"/>
     </comp>
     <comp lib="0" loc="(1110,1180)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -228,7 +227,10 @@
       <a name="value" val="0x2020202020202020"/>
       <a name="width" val="64"/>
     </comp>
-    <comp lib="0" loc="(90,40)" name="Clock"/>
+    <comp lib="0" loc="(90,40)" name="Clock">
+      <a name="highDuration" val="10"/>
+      <a name="lowDuration" val="10"/>
+    </comp>
     <comp lib="0" loc="(960,1360)" name="Constant">
       <a name="value" val="0xb"/>
       <a name="width" val="4"/>
@@ -237,13 +239,14 @@
       <a name="label" val="set_heure"/>
       <a name="width" val="64"/>
     </comp>
-    <comp lib="12" loc="(1310,720)" name="chrono">
-      <a name="label" val="chrono_1"/>
-    </comp>
-    <comp lib="12" loc="(1680,1060)" name="Countdown"/>
-    <comp lib="13" loc="(990,240)" name="horloge">
+    <comp lib="0" loc="(990,670)" name="Clock"/>
+    <comp lib="12" loc="(990,240)" name="horloge">
       <a name="label" val="horloge_1"/>
     </comp>
+    <comp lib="13" loc="(1310,720)" name="chrono">
+      <a name="label" val="chrono_1"/>
+    </comp>
+    <comp lib="13" loc="(1680,1060)" name="Countdown"/>
     <comp lib="2" loc="(1020,1350)" name="Multiplexer">
       <a name="width" val="4"/>
     </comp>
@@ -273,6 +276,8 @@
     </comp>
     <wire from="(1000,1370)" to="(1000,1430)"/>
     <wire from="(1000,1430)" to="(1700,1430)"/>
+    <wire from="(1000,670)" to="(1000,720)"/>
+    <wire from="(1000,720)" to="(1090,720)"/>
     <wire from="(1000,880)" to="(1000,1000)"/>
     <wire from="(1000,880)" to="(1020,880)"/>
     <wire from="(1020,1350)" to="(1050,1350)"/>
@@ -434,6 +439,7 @@
     <wire from="(960,1340)" to="(990,1340)"/>
     <wire from="(960,1360)" to="(990,1360)"/>
     <wire from="(990,240)" to="(1090,240)"/>
+    <wire from="(990,670)" to="(1000,670)"/>
   </circuit>
   <circuit name="MODE_SELEC">
     <a name="appearance" val="logisim_evolution"/>
