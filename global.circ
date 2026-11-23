@@ -65,7 +65,7 @@
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="downloadBoard" val="TERASIC_DE10LITE"/>
     <a name="downloadFrequency" val="2500000.0"/>
-    <a name="simulationFrequency" val="16.0"/>
+    <a name="simulationFrequency" val="32.0"/>
     <boardmap boardname="TERASIC_DE10LITE">
       <mc key="/CLICK" map="575,243"/>
       <mc key="/MODE" map="575,285"/>
@@ -148,10 +148,7 @@
       <a name="label" val="Dring"/>
       <a name="output" val="true"/>
     </comp>
-    <comp lib="0" loc="(310,890)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="CLCK"/>
-    </comp>
+    <comp lib="0" loc="(190,810)" name="Clock"/>
     <comp lib="0" loc="(330,850)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="MODE"/>
@@ -159,10 +156,6 @@
     <comp lib="0" loc="(380,690)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="CLICK"/>
-    </comp>
-    <comp lib="0" loc="(420,730)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="CLCK"/>
     </comp>
     <comp lib="0" loc="(530,270)" name="Constant"/>
     <comp lib="0" loc="(620,810)" name="Tunnel">
@@ -350,13 +343,15 @@
     <wire from="(1700,1180)" to="(1750,1180)"/>
     <wire from="(1740,1080)" to="(1740,1120)"/>
     <wire from="(1740,1120)" to="(1750,1120)"/>
-    <wire from="(310,890)" to="(370,890)"/>
+    <wire from="(190,730)" to="(190,810)"/>
+    <wire from="(190,730)" to="(450,730)"/>
+    <wire from="(190,810)" to="(190,890)"/>
+    <wire from="(190,890)" to="(370,890)"/>
     <wire from="(330,850)" to="(370,850)"/>
     <wire from="(370,870)" to="(370,890)"/>
     <wire from="(370,890)" to="(370,930)"/>
     <wire from="(370,930)" to="(530,930)"/>
     <wire from="(380,690)" to="(450,690)"/>
-    <wire from="(420,730)" to="(450,730)"/>
     <wire from="(450,710)" to="(450,730)"/>
     <wire from="(530,1160)" to="(670,1160)"/>
     <wire from="(530,270)" to="(700,270)"/>
