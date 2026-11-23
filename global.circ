@@ -24,8 +24,8 @@
   <lib desc="#BFH-Praktika" name="9"/>
   <lib desc="#Input/Output-Extra" name="10"/>
   <lib desc="#Soc" name="11"/>
-  <lib desc="file#valery.circ" name="12"/>
-  <lib desc="file#quentin.circ" name="13"/>
+  <lib desc="file#quentin.circ" name="12"/>
+  <lib desc="file#valery.circ" name="13"/>
   <main name="print"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -65,7 +65,7 @@
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="downloadBoard" val="TERASIC_DE10LITE"/>
     <a name="downloadFrequency" val="2500000.0"/>
-    <a name="simulationFrequency" val="32.0"/>
+    <a name="simulationFrequency" val="256.0"/>
     <boardmap boardname="TERASIC_DE10LITE">
       <mc key="/CLICK" map="575,243"/>
       <mc key="/MODE" map="575,285"/>
@@ -148,7 +148,10 @@
       <a name="label" val="Dring"/>
       <a name="output" val="true"/>
     </comp>
-    <comp lib="0" loc="(190,810)" name="Clock"/>
+    <comp lib="0" loc="(190,810)" name="Clock">
+      <a name="highDuration" val="16"/>
+      <a name="lowDuration" val="16"/>
+    </comp>
     <comp lib="0" loc="(330,850)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="MODE"/>
@@ -221,8 +224,8 @@
       <a name="width" val="64"/>
     </comp>
     <comp lib="0" loc="(90,40)" name="Clock">
-      <a name="highDuration" val="10"/>
-      <a name="lowDuration" val="10"/>
+      <a name="highDuration" val="128"/>
+      <a name="lowDuration" val="128"/>
     </comp>
     <comp lib="0" loc="(960,1360)" name="Constant">
       <a name="value" val="0xb"/>
@@ -233,13 +236,13 @@
       <a name="width" val="64"/>
     </comp>
     <comp lib="0" loc="(990,670)" name="Clock"/>
-    <comp lib="12" loc="(990,240)" name="horloge">
-      <a name="label" val="horloge_1"/>
-    </comp>
-    <comp lib="13" loc="(1310,720)" name="chrono">
+    <comp lib="12" loc="(1310,720)" name="chrono">
       <a name="label" val="chrono_1"/>
     </comp>
-    <comp lib="13" loc="(1680,1060)" name="Countdown"/>
+    <comp lib="12" loc="(1680,1060)" name="Countdown"/>
+    <comp lib="13" loc="(990,240)" name="horloge">
+      <a name="label" val="horloge_1"/>
+    </comp>
     <comp lib="2" loc="(1020,1350)" name="Multiplexer">
       <a name="width" val="4"/>
     </comp>
