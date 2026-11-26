@@ -95,7 +95,7 @@
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="downloadBoard" val="TERASIC_DE10LITE"/>
     <a name="downloadFrequency" val="2500000.0"/>
-    <a name="simulationFrequency" val="1.0"/>
+    <a name="simulationFrequency" val="128.0"/>
     <boardmap boardname="TERASIC_DE10LITE">
       <mc key="/Alarme_activee" map="485,8"/>
       <mc key="/CLICK" map="575,243"/>
@@ -1195,7 +1195,7 @@
     <comp lib="4" loc="(1880,1240)" name="T Flip-Flop">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
-    <comp lib="8" loc="(928,1250)" name="Text">
+    <comp lib="8" loc="(813,1306)" name="Text">
       <a name="text" val="Horloge, Set hour, Set min, Set sec, Alarm hour, Alarm min, Chrono, Cntdown Min, Cntdown Sec, Cntdown Running"/>
     </comp>
     <comp loc="(1010,70)" name="DINO">
@@ -1204,18 +1204,14 @@
     <comp loc="(1310,720)" name="chrono">
       <a name="label" val="chrono_1"/>
     </comp>
-    <comp loc="(1530,330)" name="lcd1602i2c_driver">
-      <a name="label" val="lcd1602i2c_driver_1"/>
-    </comp>
     <comp loc="(1680,1060)" name="Countdown">
       <a name="label" val="Countdown_1"/>
     </comp>
     <comp loc="(1970,860)" name="SetAlarm">
       <a name="label" val="SetAlarm_1"/>
     </comp>
-    <comp loc="(520,140)" name="Timebase_real">
-      <a name="label" val="Timebase_real_1"/>
-    </comp>
+    <comp loc="(1990,570)" name="lcd1602i2c_sim"/>
+    <comp loc="(520,140)" name="Timebase_sim"/>
     <comp loc="(520,600)" name="Pulse_1_cycle">
       <a name="label" val="Pulse_1_cycle_1"/>
     </comp>
@@ -1718,7 +1714,6 @@
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(1810,320)" name="Tunnel">
-      <a name="label" val="adder"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(430,500)" name="Pin">
@@ -1798,7 +1793,6 @@
     </comp>
     <comp lib="0" loc="(870,440)" name="Tunnel">
       <a name="facing" val="east"/>
-      <a name="label" val="adder"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(880,460)" name="Constant">
@@ -17653,7 +17647,8 @@
       <a name="appearance" val="NewPins"/>
       <a name="label" val="CLICK"/>
     </comp>
-    <comp lib="0" loc="(190,380)" name="Tunnel">
+    <comp lib="0" loc="(180,380)" name="Constant"/>
+    <comp lib="0" loc="(190,390)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="Chx"/>
     </comp>
@@ -17673,14 +17668,14 @@
       <a name="value" val="0x0"/>
     </comp>
     <comp lib="0" loc="(320,170)" name="Constant"/>
-    <comp lib="0" loc="(490,110)" name="Tunnel">
+    <comp lib="0" loc="(470,350)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="Bis"/>
     </comp>
     <comp lib="0" loc="(490,550)" name="Tunnel">
       <a name="label" val="Bis"/>
     </comp>
-    <comp lib="0" loc="(530,190)" name="Tunnel">
+    <comp lib="0" loc="(560,200)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="Chx"/>
     </comp>
@@ -17719,7 +17714,7 @@
     <comp lib="2" loc="(170,360)" name="Demultiplexer">
       <a name="enable" val="true"/>
     </comp>
-    <comp lib="2" loc="(550,160)" name="Multiplexer"/>
+    <comp lib="2" loc="(550,180)" name="Multiplexer"/>
     <comp lib="2" loc="(770,570)" name="Multiplexer">
       <a name="width" val="4"/>
     </comp>
@@ -17747,6 +17742,7 @@
     <wire from="(120,360)" to="(170,360)"/>
     <wire from="(120,90)" to="(120,360)"/>
     <wire from="(120,90)" to="(510,90)"/>
+    <wire from="(190,380)" to="(190,390)"/>
     <wire from="(200,350)" to="(220,350)"/>
     <wire from="(200,370)" to="(270,370)"/>
     <wire from="(220,190)" to="(220,350)"/>
@@ -17757,17 +17753,19 @@
     <wire from="(290,230)" to="(300,230)"/>
     <wire from="(300,200)" to="(300,230)"/>
     <wire from="(300,200)" to="(320,200)"/>
-    <wire from="(490,110)" to="(510,110)"/>
+    <wire from="(470,350)" to="(530,350)"/>
     <wire from="(490,610)" to="(700,610)"/>
-    <wire from="(510,110)" to="(510,150)"/>
-    <wire from="(510,150)" to="(520,150)"/>
+    <wire from="(500,190)" to="(500,210)"/>
+    <wire from="(500,190)" to="(520,190)"/>
+    <wire from="(500,210)" to="(530,210)"/>
     <wire from="(510,170)" to="(520,170)"/>
     <wire from="(510,230)" to="(590,230)"/>
     <wire from="(510,60)" to="(510,90)"/>
     <wire from="(510,60)" to="(580,60)"/>
-    <wire from="(530,180)" to="(530,190)"/>
-    <wire from="(550,160)" to="(560,160)"/>
-    <wire from="(560,100)" to="(560,160)"/>
+    <wire from="(530,200)" to="(560,200)"/>
+    <wire from="(530,210)" to="(530,350)"/>
+    <wire from="(550,180)" to="(560,180)"/>
+    <wire from="(560,100)" to="(560,180)"/>
     <wire from="(560,100)" to="(580,100)"/>
     <wire from="(590,230)" to="(590,560)"/>
     <wire from="(590,560)" to="(740,560)"/>
